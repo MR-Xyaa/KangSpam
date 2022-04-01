@@ -1,37 +1,4 @@
 #!/usr/bin/env bash
-clear
-# plugins bash moderen
-. lib/moduler.sh
-# depencies
-Bash.import: text_display/colorama text_display/IO.ECHO
-Bash.import: util/io.class util/IO.FUNC
-Bash.import: util/operator util/IO.SYSTEM.var
-
-# data dictionary
-var data : $(
-cat << EOF
-{
-        "nama":"IBNU UMAR SYAID",
-        "github":"https://github.com/MR-Xyaa",
-        "youtube":"GAK PUNYA YUTUB",
-        "hobi": "COLI",
-        "pacar":"APRIL CANTIK"
-}
-EOF
-)
-
-declare data=${data/{ /{}; declare data=$(echo "$data"|sed -e 's; };};g');
-
-var nama : $(Tulis.strN "$data"|jq -r .nama); Tulis.strN "nama     : ${nama}"
-var git : $(Tulis.strN "$data"|jq -r .github); Tulis.strN "github   : ${git}"
-var yt : $(Tulis.strN "$data"|jq -r .youtube); Tulis.strN "youtube  : ${yt}"
-var ho : $(Tulis.strN "$data"|jq -r .hobi); Tulis.strN "hobi     : ${ho}"
-var pc : $(Tulis.strN "$data"|jq -r .pacar); Tulis.strN "pacar    : ${pc}"
-
-
-## SPAM BY MR-Xyaa 
-
-#!/usr/bin/env bash
 
 
 # Author  : MR-Xyaa
