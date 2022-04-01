@@ -1,46 +1,44 @@
 #!/usr/bin/env bash
+clear
+# plugins bash moderen
+. lib/moduler.sh
+# depencies
+Bash.import: text_display/colorama text_display/IO.ECHO
+Bash.import: util/io.class util/IO.FUNC
+Bash.import: util/operator util/IO.SYSTEM.var
 
-# note
-<< EOF
-
-semua code di dalam script ini di rancang oleh Bayu Riski A.M
-di larang merubah source ini sebelum ijin kepada author nya
-
-komunitas : t.me/BashShell
-oficial   : t.me/SpeedrunOFC
-
-dan subscribe juga channel youtube saya [pejuang kentang]
-
-# LICENSE
-MIT License
-
-Copyright (c) 2022 Bash programmer
-
-Permission is hereby granted, free of charge, to any person obtaining a copy
-of this software and associated documentation files (the "Software"), to deal
-in the Software without restriction, including without limitation the rights
-to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-copies of the Software, and to permit persons to whom the Software is
-furnished to do so, subject to the following conditions:
-
-The above copyright notice and this permission notice shall be included in all
-copies or substantial portions of the Software.
-
-THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
-SOFTWARE.
-
+# data dictionary
+var data : $(
+cat << EOF
+{
+        "nama":"IBNU UMAR SYAID",
+        "github":"https://github.com/MR-Xyaa",
+        "youtube":"GAK PUNYA YUTUB",
+        "hobi": "COLI",
+        "pacar":"APRIL CANTIK"
+}
 EOF
+)
 
-# author  : speedrun
-# github  : https://github.com/Speedrun-bash
-# youtube : pejuang kentang
+declare data=${data/{ /{}; declare data=$(echo "$data"|sed -e 's; };};g');
 
-# jangan lupa subscribe pejuang kentang ya gan ^_^
+var nama : $(Tulis.strN "$data"|jq -r .nama); Tulis.strN "nama     : ${nama}"
+var git : $(Tulis.strN "$data"|jq -r .github); Tulis.strN "github   : ${git}"
+var yt : $(Tulis.strN "$data"|jq -r .youtube); Tulis.strN "youtube  : ${yt}"
+var ho : $(Tulis.strN "$data"|jq -r .hobi); Tulis.strN "hobi     : ${ho}"
+var pc : $(Tulis.strN "$data"|jq -r .pacar); Tulis.strN "pacar    : ${pc}"
+
+
+## SPAM BY MR-Xyaa 
+
+#!/usr/bin/env bash
+
+
+# Author  : MR-Xyaa
+# Github  : https://github.com/MR-Xyaa
+# Facebook : Sapa Yah
+
+# Jangan Lupa Follow Fb Gw Bang ^_^
 
 # plugins bash moderen
 . lib/moduler.sh
@@ -75,11 +73,11 @@ class __main__; {
 		if ! (ambil: req in "errors" &> /dev/null); then
 			Tulis.strN "${ku}[${pu}${waktu}${ku}]${st} ${bg_cy}Bot info${st}${pu} \tspamming to ${ku}${no} ${ij}V"
 			Tulis.strN "${me}[${pu}${waktu}${me}]${st} ${bg_ij}bot note${st}${me} \tevery 4 times spam will cause a colddown ( which aims to avoid the web so as not to sulk ;V )"
-			Tulis.strN "${cy}[${pu}${waktu}${cy}]${st} ${bg_me}message${st}${pu}  \tsubscribe pejuang kentang${st}\n"
+			Tulis.strN "${cy}[${pu}${waktu}${cy}]${st} ${bg_me}message${st}${pu}  \tFollow Fb Gw Ya Cok${st}\n"
 		else
 			Tulis.strN "${ku}[${pu}${waktu}${ku}]${st} ${bg_cy}Bot info${st}${pu} \tspamming to ${ku}${no} ${me}X${st}"
 		    Tulis.strN "${me}[${pu}${waktu}${me}]${st} ${bg_ij}bot note${st}${me} \tevery 4 times spam will cause a colddown ( which aims to avoid the web so as not to sulk ;V )"
-			Tulis.strN "${cy}[${pu}${waktu}${cy}]${st} ${bg_me}message${st}${pu}  \tsubscribe pejuang kentang${st}\n"
+			Tulis.strN "${cy}[${pu}${waktu}${cy}]${st} ${bg_me}message${st}${pu}  \tFollow Fb Gw Ya Cok${st}\n"
 		fi
 	}
         def: __main__::wa(){
@@ -101,15 +99,15 @@ class __main__; {
                 if ! (ambil: req in "errors" &> /dev/null); then
                         Tulis.strN "${ku}[${pu}${waktu}${ku}]${st} ${bg_cy}bot info${st}${pu} \tspamming to ${ku}${no} ${ij}V"
                         Tulis.strN "${me}[${pu}${waktu}${me}]$st ${bg_ij}bot note${st}${me} \tevery 2 times spam will cause a colddown ( which aims to avoid the web so as not to sulk ;V )"
-                		Tulis.strN "${cy}[${pu}${waktu}${cy}]$st ${bg_me}message${st}${pu}  \tsubscribe pejuang kentang${st}\n"
+                		Tulis.strN "${cy}[${pu}${waktu}${cy}]$st ${bg_me}message${st}${pu}  \tFollow fb Gw Ya Cok${st}\n"
                 	elif (ambil: req in "errors" &> /dev/null); then
                        Tulis.strN "${ku}[${pu}${waktu}${ku}]$st ${bg_cy}bot info${st}${pu} \tspamming to ${ku}${no} ${me}X"
                        Tulis.strN "${me}[${pu}${waktu}${me}]$st ${bg_ij}bot note${st}${me} \tevery 4 times spam will cause a colddown ( which aims to avoid the web so as not to sulk ;V )"
-                       Tulis.strN "${cy}[${pu}${waktu}${cy}]$st ${bg_me}message${st}${me}  \tsubscribe pejuang kentang${st}\n"
+                       Tulis.strN "${cy}[${pu}${waktu}${cy}]$st ${bg_me}message${st}${me}  \tFollow Fb Gw Ya Cok${st}\n"
                     elif (test -z "$req"); then
                     	 Tulis.strN "${ku}[${pu}${waktu}${ku}]$st ${bg_cy}bot info${st}${pu} \tspamming to ${ku}${no} ${me}X${ku} (${ij}please check your internet${ku})${st}"
                     	 Tulis.strN "${me}[${pu}${waktu}${me}]$st ${bg_ij}bot note${st}${me} \tevery 4 times spam will cause a colddown ( which aims to avoid the web so as not to sulk ;V )"
-                    	 Tulis.strN "${cy}[${pu}${waktu}${cy}]$st ${bg_me}message${st}${pu}  \tsubscribe pejuang kentang${st}\n"
+                    	 Tulis.strN "${cy}[${pu}${waktu}${cy}]$st ${bg_me}message${st}${pu}  \tFollow Fb Gw Ya Cok${st}\n"
                     fi
         }
 }; class.new: __main__ mode
@@ -161,22 +159,22 @@ def: gas(){
 		var supra : $(shuf -i 1-3 -n 1);
 		
 		Tulis.str "$ij"
-		toilet -f slant "Lummo evil";
+		toilet -f slant "KangSpam";
 		Tulis.str "$st"
-		Tulis.strN "\t\t   ${honda[$susuki]}Lummo ${honda[$supra]}Spamming"
+		Tulis.strN "\t\t   ${honda[$susuki]}MR-Xyaa ${honda[$supra]}Spam"
 		echo
-		Tulis.strN "${ku}> ${cy}server   ${me}: ${pu}${bg_cy}lummo shop${st}"
-		Tulis.strN "${m}> ${cy}language ${me}: ${pu}${bg_me}Bash${st}"
+		Tulis.strN "${ku}> ${cy}Subjek   ${me}: ${pu}${bg_cy}Spam Itu Haram${st}"
+		Tulis.strN "${m}> ${cy}Nama ${me}: ${pu}${bg_me}InuGanteng${st}"
 		echo -e "${ij}$abc"
-		Tulis.strN "${ku}|\t${ij}~${me}>${cy} author  ${me}:${pu} speedrun                             ${ku}|"
-		Tulis.strN "${ku}|\t${ij}~${me}>${ij} youtube ${me}:${pu} pejuang kentang                      ${ku}| "
-		Tulis.strN "${ku}|\t${ij}~${me}>${ku} github  ${me}:${pu} Speedrun-bash && Bayu12345677        ${ku}|"
+		Tulis.strN "${ku}|\t${ij}~${me}>${cy} Author  ${me}:${pu} MR-Xyaa                              ${ku}|"
+		Tulis.strN "${ku}|\t${ij}~${me}>${ij} Facebook ${me}:${pu} Sapa Yah                            ${ku}| "
+		Tulis.strN "${ku}|\t${ij}~${me}>${ku} Github  ${me}:${pu} https://github.com/MR-Xyaa           ${ku}|"
 		echo -e "${ij}$abc${st}"
 		echo
 		Tulis.strN "${me}1${m}.${ku} server ${ij}(${me}sms${ij})"
 		Tulis.strN "${me}2${m}.${cy} server ${ij}(${me}whatsapp${ij})"
 		echo
-		Tulis.str "${ij}[${bi}#${ij}]${ku}(${me}master${ku})${cy}> ${st}"; read send; echo
+		Tulis.str "${ij}[${bi}#${ij}]-${ku}(${me}MR-Xyaa${ku})${cy}>>> ${st}"; read send; echo
 
 		if (test -z "$send"); then
 			Tulis.strN "${me}[${ku}${times}${me}]${pu} ${bg_cy}Bot info${st}${pu} \tinput not found${st}"
@@ -196,7 +194,7 @@ def: gas(){
 		if ((send == 1)); then
 			clear; echo
 			Tulis.strN "${cy}*${m} date${ij}   \t$(date)"
-			Tulis.strN "${ij}*${me} server${bi} \tlummo shop"
+			Tulis.strN "${ij}*${me} server${bi} \tKangSpam"
 			Tulis.strN "${me}*${cy} metode${pu} \tsms"
 			echo
 			Tulis.str "${ij}(${bg_me}target${st}${ij})${m}> ${st}"; read te
@@ -245,10 +243,10 @@ def: gas(){
 		elif ((send == 2)); then
                         clear; echo
                         Tulis.strN "${cy}*${me} date ${hi}  \t$(date)"
-                        Tulis.strN "${me}*${cy} server${pu} \tlummo shop"
+                        Tulis.strN "${me}*${cy} server${pu} \tKangSpam"
                         Tulis.strN "${ij}*${me} metode${pu} \twhatsapp"
                         echo
-                        Tulis.str "${ij}(${me}target${ij})${m}> ${st}"; read te
+                        Tulis.str "${ij}(${me}Target${ij})${m}> ${st}"; read te
                         echo
 
                         if [[ -z "$te" ]]; then
@@ -314,7 +312,7 @@ def: gas(){
 			if ((model == 1)); then
 				var sys_colors : "${colors[1]}"
 				var sys_warna : "${colors[4]}"
-				var app_symb : "-"
+				var app_symb : ">"
 			elif ((model == 2)); then
 				var sys_colors : "${colors[2]}"
 				var sys_warna : "${colors[3]}"
@@ -322,19 +320,19 @@ def: gas(){
 			elif ((model == 3)); then
 				var sys_colors : "${colors[3]}"
 				var sys_warna : "${colors[2]}"
-				var app_symb : "/"
+				var app_symb : "-"
 			elif ((model == 4)); then
 				let model=0
 				var sys_colors : "${colors[4]}"
 				var sys_warna : "${colors[1]}"
-				var app_symb : "#"
+				var app_symb : "×"
 			fi
 
 			sleep 01
-			printf "\r${pu}subscribe pejuang kentang ${sys_colors}${app_symb}${st}_${sys_warna}'${st}"
+			printf "\r${pu}FOLLOW FACEBOOK GW DULU COK ${sys_colors}${app_symb}${st}_${sys_warna}^${st}"
 		done
 	done; sleep 1
-		xdg-open https://www.youtube.com/channel/UCtu-GcxKL8kJBXpR1wfMgWg/
+		xdg-open https://www.facebook.com/inu.pembangkang.7
 	call:- gas "->" __main__
 	
   }
