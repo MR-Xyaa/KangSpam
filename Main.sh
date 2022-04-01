@@ -1,5 +1,3 @@
-GNU nano 6.2                                                                          h.sh                                                                          Modified
-
 #!/usr/bin/env bash
 clear
 # plugins bash moderen
